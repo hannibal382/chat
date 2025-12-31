@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;600&display=swap');
+
+body {
+  margin: 0;
+  background: transparent;
+  font-family: 'Oswald', sans-serif;
+}
+
+#chat {
+  width: 420px;
+  padding: 10px;
+}
+
+/* ===== MESSAGE ===== */
+.message {
+  background: rgba(45, 85, 45, 0.95);
+  border-left: 4px solid #2f5f2f;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  animation: slideIn 0.3s ease-out;
+}
+
+/* ===== PSEUDO ===== */
+.username {
+  color: #ffffff;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-right: 6px;
+}
+
+/* ===== TEXTE ===== */
+.text {
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 1.35;
+}
+
+/* ===== RÔLES ===== */
+.message.broadcaster { border-left-color: #ffd54a; }
+.message.mod         { border-left-color: #3f8f3f; }
+.message.subscriber  { border-left-color: #c9a94a; }
+
+/* ===== ANIMATION ===== */
+@keyframes slideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
